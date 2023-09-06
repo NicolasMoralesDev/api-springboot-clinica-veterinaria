@@ -1,10 +1,15 @@
 
 package com.example.Veterinaria.model;
 
+import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -18,13 +23,15 @@ import lombok.Setter;
 @Getter @Setter
 public class Mascota {
     
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Id
     private Long id;
     private String nombre;
     private String especie;
     private String raza;
     private String color;
+        @ManyToOne(cascade = CascadeType.ALL)
+    private Duenio dueño;
 
     public Mascota() {
     }

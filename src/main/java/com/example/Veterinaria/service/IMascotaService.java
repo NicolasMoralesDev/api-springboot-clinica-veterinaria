@@ -16,4 +16,6 @@ public interface IMascotaService {
     public Mascota traerMascotaId(Long id);
     public Message borrarMascota(long id);
     public void crearMascota(Mascota nueva);
-    public void modifMascota(Mascota modificada);}
+    public void modifMascota(Mascota modificada);
+    public List traerMascotaPerro ();
+}

@@ -38,6 +38,13 @@ public class MascotaController {
         return new ResponseEntity(mascoServ.traerMascotas(), HttpStatus.ACCEPTED);
     }
     
+    @GetMapping("/traer/caniches")
+    @ResponseBody
+    public ResponseEntity traerMascotasCaniches(){
+        
+        return new ResponseEntity(mascoServ.traerMascotaPerro(), HttpStatus.ACCEPTED);
+    }
+    
     @GetMapping("/traer/{id}")
     @ResponseBody
     public ResponseEntity traerMascota(@PathVariable long id){

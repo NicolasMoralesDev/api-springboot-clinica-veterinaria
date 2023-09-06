@@ -54,5 +54,11 @@ public class MascotaService implements IMascotaService{
        
         mascoRepo.save(modificada);
     }
+
+    @Override
+    public List traerMascotaPerro() {
+       
+        return mascoRepo.findByRazaAndEspecie();
+    }
     
 }

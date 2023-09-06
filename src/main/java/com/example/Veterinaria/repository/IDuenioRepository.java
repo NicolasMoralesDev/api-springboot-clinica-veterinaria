@@ -13,4 +13,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface IDuenioRepository extends JpaRepository<Duenio, Long>{
     
+    
 }
