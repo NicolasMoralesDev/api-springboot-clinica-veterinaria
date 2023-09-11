@@ -2,6 +2,7 @@
 package com.example.Veterinaria.service;
 
 import com.example.Veterinaria.model.Duenio;
+import com.example.Veterinaria.model.Mascota;
 import com.example.Veterinaria.repository.IDuenioRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,6 +41,7 @@ public class DuenioService implements IDuenioService{
     public void editaruenio(Duenio modif) {
         duenioRepo.save(modif);
     }
+    
 
     @Override
     public void crearDuenio(Duenio nuevo) {
@@ -47,5 +49,6 @@ public class DuenioService implements IDuenioService{
        duenioRepo.save(nuevo);
         
     }
+    
     
 }

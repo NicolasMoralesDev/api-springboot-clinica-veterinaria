@@ -1,7 +1,6 @@
 
 package com.example.Veterinaria.repository;
 
-import com.example.Veterinaria.model.Duenio;
 import com.example.Veterinaria.model.Mascota;
 import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;

@@ -20,9 +20,10 @@ public class MascotaService implements IMascotaService{
     private IMascotaRepository mascoRepo;
 
     @Override
-    public List traerMascotas() {
+    public List  traerMascotas() {
        
-        return mascoRepo.findAll();
+          return    mascoRepo.findAll();
+        
     }
 
     @Override
@@ -52,8 +53,10 @@ public class MascotaService implements IMascotaService{
     @Override
     public void modifMascota(Mascota modificada) {
        
+        
         mascoRepo.save(modificada);
     }
+    
 
     @Override
     public List traerMascotaPerro() {

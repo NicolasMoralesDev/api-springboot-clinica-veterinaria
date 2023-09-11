@@ -2,6 +2,7 @@
 package com.example.Veterinaria.service;
 
 import com.example.Veterinaria.model.Duenio;
+import com.example.Veterinaria.model.Mascota;
 import java.util.List;
 
 /**

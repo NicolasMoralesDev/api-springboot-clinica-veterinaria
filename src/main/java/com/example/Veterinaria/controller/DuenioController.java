@@ -2,6 +2,7 @@
 package com.example.Veterinaria.controller;
 
 import com.example.Veterinaria.model.Duenio;
+import com.example.Veterinaria.model.Mascota;
 import com.example.Veterinaria.model.Message;
 import com.example.Veterinaria.service.IDuenioService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +15,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -37,6 +37,7 @@ public class DuenioController {
         
       return ResponseEntity.ok( duenioServ.traerDuenios());
     }
+    
     
     @GetMapping("/traer/{id}")
     @ResponseBody
@@ -70,4 +71,6 @@ public class DuenioController {
         duenioServ.editaruenio(modif);
         return ResponseEntity.ok(new Message("Dueño modificado con exito!"));
     }
+    
+  
 }

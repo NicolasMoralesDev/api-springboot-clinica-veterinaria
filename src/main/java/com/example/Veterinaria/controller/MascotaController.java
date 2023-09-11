@@ -1,6 +1,7 @@
 
 package com.example.Veterinaria.controller;
 
+import com.example.Veterinaria.model.DuenioDTO;
 import com.example.Veterinaria.model.Mascota;
 import com.example.Veterinaria.model.Message;
 import com.example.Veterinaria.service.MascotaService;
@@ -30,7 +31,15 @@ public class MascotaController {
     @Autowired
     private MascotaService mascoServ;
     
-    
+//    @GetMapping("/traer/dto/{id}")
+//    @ResponseBody
+//    public ResponseEntity getDtoMasco(@PathVariable long id){
+//        
+//       Mascota mascota = mascoServ.traerMascotaId(id);
+//        
+//    return ResponseEntity.ok( new DuenioDTO(mascota.getNombre(), mascota.getEspecie(), mascota.getRaza()));
+//    }
+//    
     @GetMapping("/traer")
     @ResponseBody
     public ResponseEntity traerMascotas(){
@@ -77,4 +86,5 @@ public class MascotaController {
         
         return new ResponseEntity( new Message("Mascota modificada con exito!"), HttpStatus.ACCEPTED);
     }
+    
 }
