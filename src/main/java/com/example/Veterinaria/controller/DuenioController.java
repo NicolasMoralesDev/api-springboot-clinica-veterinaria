@@ -59,8 +59,7 @@ public class DuenioController {
     @ResponseBody
     public ResponseEntity borrarDuenio (@PathVariable long id){
         
-        duenioServ.borrarDuenio(id);
-        return ResponseEntity.ok(new Message("Dueño eliminado con Exito!!"));
+        return ResponseEntity.ok(duenioServ.borrarDuenio(id));
 
     }
     

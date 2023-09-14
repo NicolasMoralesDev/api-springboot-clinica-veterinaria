@@ -39,7 +39,7 @@ public class MascotaService implements IMascotaService{
         try {
             mascoRepo.deleteById(id);
         } catch (Exception e) {
-            return new Message(e.getMessage());
+            return new Message("No existe ninguna mascota con ese ID!");
         }
       return new Message("Mascota eliminada con exito!");
     }
